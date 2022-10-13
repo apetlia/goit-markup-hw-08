@@ -1,0 +1,44 @@
+.priorities {
+  padding-top: 94px;
+}
+
+.priorities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.priorities-item {
+  width: 270px;
+}
+
+.priorities-bg-icons {
+  height: 120px;
+  width: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.priorities-title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $title-color;
+}
+
+.priorities-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: $text-color;
+}

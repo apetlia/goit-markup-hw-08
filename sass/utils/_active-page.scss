@@ -1,0 +1,19 @@
+.active-page {
+  position: relative;
+
+  color: $accent-color;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    height: 4px;
+    width: 100%;
+
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
+}
