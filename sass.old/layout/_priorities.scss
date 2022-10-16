@@ -1,11 +1,5 @@
 .priorities {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
-  @include computer {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
+  padding-top: 94px;
 }
 
 .priorities-list {
@@ -15,18 +9,12 @@
 }
 
 .priorities-item {
-  @include tablet {
-    flex-basis: calc((100% - 30px) / 2);
-  }
-
-  @include computer {
-    flex-basis: calc((100% - 90px) / 4);
-  }
+  width: 270px;
 }
 
 .priorities-bg-icons {
   height: 120px;
-  width: 100%;
+  width: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,16 +27,12 @@
 .priorities-title {
   margin-bottom: 10px;
 
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: $title-color;
-
-  @media screen and (max-width: 787px) {
-    text-align: center;
-  }
 }
 
 .priorities-text {

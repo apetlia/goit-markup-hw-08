@@ -1,0 +1,31 @@
+.soc-set {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.soc-set__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+  transition: color $animation-time, background-color $animation-time;
+
+  &--dark {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:hover {
+    color: #ffffff;
+    background-color: $accent-color;
+  }
+}
+
+.soc-set__icon {
+  fill: currentColor;
+}

@@ -1,27 +1,12 @@
 .portfolio {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
-  @include computer {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .portfolio-filter {
+  margin-bottom: 50px;
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 8px;
-  row-gap: 21px;
-  margin-bottom: 40px;
-
-  @include tablet {
-    justify-content: center;
-  }
-
-  @include computer {
-    margin-bottom: 50px;
-  }
+  justify-content: center;
 }
 
 .portfolio-btn {
@@ -49,4 +34,8 @@
     color: #ffffff;
     background-color: $accent-color;
   }
+}
+
+.portfolio-filter-item:not(:last-child) {
+  margin-right: 8px;
 }

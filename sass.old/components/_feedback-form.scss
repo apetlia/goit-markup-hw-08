@@ -66,8 +66,8 @@
   cursor: pointer;
 
   &::placeholder {
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.01em;
 
     color: rgba(117, 117, 117, 0.5);
@@ -93,8 +93,8 @@
 .licence__label {
   display: flex;
   justify-content: center;
-  font-size: 12px;
-  line-height: 1.61;
+  font-size: 14px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   margin-right: auto;
 

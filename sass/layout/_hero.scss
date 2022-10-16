@@ -1,31 +1,51 @@
 .hero {
-  padding-bottom: 200px;
-  padding-top: 200px;
+  padding-bottom: 118px;
+  padding-top: 118px;
   text-align: center;
-  margin: 0 auto;
-  max-width: 1600px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: $third-bg-color;
+
+  @include computer {
+    margin: 0 auto;
+    max-width: 1600px;
+
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
 }
 
 .hero__title {
-  max-width: 696px;
-  margin: 0px auto 30px;
+  //   max-width: 696px;
+
+  margin-bottom: 30px;
 
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   color: #ffffff;
+
+  @include tablet {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include computer {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__button {
-  padding: 10px 32px;
-  margin: 0 auto;
+  @include computer {
+    min-width: 216px;
+  }
 }

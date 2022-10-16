@@ -8,14 +8,40 @@
 }
 
 .header__logo {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin-right: 94px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: auto;
 }
 
-.auth__list {
-  display: flex;
-  column-gap: 50px;
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+
+  &_icon-close {
+    display: none;
+  }
+
+  &.is-open .menu-button_icon-close {
+    display: block;
+  }
+
+  &.is-open .menu-button_icon-open {
+    display: none;
+  }
+}
+
+.auth {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    column-gap: 50px;
+  }
 }
 
 .auth__link {

@@ -1,13 +1,12 @@
-// .addresses {
-//     width: 232px;
-// }
+.addresses {
+  width: 231px;
+}
 
 .address__item {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  text-align: center;
 
   &:not(:last-child) {
     margin-bottom: 9px;
