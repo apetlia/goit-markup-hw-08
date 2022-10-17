@@ -12,6 +12,10 @@
   &:not(:last-child) {
     margin-bottom: 9px;
   }
+
+  @include computer {
+    text-align: left;
+  }
 }
 
 %address-item-common {

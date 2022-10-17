@@ -23,11 +23,37 @@
   </head>
   <body>
     <!-- header -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
-        <a class="logo header__logo logo--black link" href="./index.html"
-          ><span class="logo__span">Web</span>Studio</a
+        <a class="logo header__logo logo--black link" href="./index.html">
+          <span class="logo__span">Web</span>Studio</a
         >
+
+        <button
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="menu-button js-open-menu"
+        >
+          <svg width="40" height="40" aria-label="Menu switch">
+            <use class="menu-button_icon-open" href="./images/icons.svg#icon-menu"></use>
+            <use class="menu-button_icon-close" href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <!-- 
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-button js-close-menu">
+            <svg width="40" height="40" aria-label="Menu switch"></svg>
+          </button>
+
+          <ul class="mobile-menu">
+            <li><a href="" class="link">About</a></li>
+            <li><a href="" class="link">Products</a></li>
+            <li><a href="" class="link">Contacts</a></li>
+            <li><a href="" class="link">Career</a></li>
+          </ul>
+        </div> -->
+
         <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__item">
@@ -43,7 +69,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="auth__list list">
+        <ul class="auth list">
           <li class="auth__item">
             <a class="auth__link link" href="mailto:info@devstudio.com">
               <svg class="auth__icon" width="16" height="12">
@@ -63,7 +89,7 @@
           </li>
         </ul>
       </div>
-    </header> -->
+    </header>
     <main>
       <!-- section portfolio -->
       <section class="portfolio">
@@ -303,7 +329,7 @@
       </section>
     </main>
     <!-- footer -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer__wrap-address">
           <a class="logo footer__logo logo--white link" href="./index.html"
@@ -373,6 +399,6 @@
           </button>
         </form>
       </div>
-    </footer> -->
+    </footer>
   </body>
 </html>

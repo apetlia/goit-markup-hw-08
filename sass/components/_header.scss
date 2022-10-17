@@ -5,12 +5,17 @@
 .header > .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header__logo {
   padding-top: 16px;
   padding-bottom: 16px;
-  margin-right: auto;
+
+  @include tablet {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
 }
 
 .menu-button {
@@ -33,6 +38,10 @@
   &.is-open .menu-button_icon-open {
     display: none;
   }
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .auth {
@@ -40,7 +49,13 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    column-gap: 50px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 30px;
   }
 }
 
