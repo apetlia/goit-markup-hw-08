@@ -27,30 +27,68 @@
           <span class="logo__span">Web</span>Studio</a
         >
 
-        <button
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          class="menu-button js-open-menu"
-        >
-          <svg width="40" height="40" aria-label="Menu switch">
+        <button type="button" class="menu-button-open">
+          <svg width="40" height="40">
             <use class="menu-button_icon-open" href="./images/icons.svg#icon-menu"></use>
-            <use class="menu-button_icon-close" href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <!-- 
-        <div class="menu-container js-menu-container" id="mobile-menu">
-          <button class="menu-button js-close-menu">
-            <svg width="40" height="40" aria-label="Menu switch"></svg>
-          </button>
+        <div class="mobile-menu is-hidden">
+          <div class="container">
+            <button type="button" class="mobile-menu__button-close">
+              <svg width="40" height="40">
+                <use class="mobile-menu_icon-close" href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <ul class="mobile-nav list">
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link link active-page" href="./index.html">Студія</a>
+              </li>
 
-          <ul class="mobile-menu">
-            <li><a href="" class="link">About</a></li>
-            <li><a href="" class="link">Products</a></li>
-            <li><a href="" class="link">Contacts</a></li>
-            <li><a href="" class="link">Career</a></li>
-          </ul>
-        </div> -->
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link link" href="./portfolio.html">Портфоліо</a>
+              </li>
+
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link link" href="">Контакти</a>
+              </li>
+            </ul>
+
+            <ul class="mobile-contact list">
+              <li class="mobile-contact__item">
+                <a class="mobile-contact__tel link" href="tel:+380961111111"> +38 096 111 11 11</a>
+              </li>
+
+              <li class="mobile-contact__item">
+                <a class="mobile-contact__mail link" href="mailto:info@devstudio.com">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobile-soc list">
+              <li class="mobile-soc__item">
+                <a href="#" class="mobile-soc__link link" rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile-soc__item">
+                <a href="#" class="mobile-soc__link link" rel="noopener noreferrer nofollow"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mobile-soc__item">
+                <a href="#" class="mobile-soc__link link" rel="noopener noreferrer nofollow"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mobile-soc__item">
+                <a href="#" class="mobile-soc__link link" rel="noopener noreferrer nofollow"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <nav class="nav">
           <ul class="nav__list list">
@@ -158,17 +196,32 @@
           <h2 class="works-title">Чим ми займаємося</h2>
           <ul class="works-list list">
             <li class="works-item">
-              <img class="works-img" src="./images/img1.jpg" alt="desctop codding" width="370" />
+              <img
+                class="works-img"
+                srcset="./images/img1-d.jpg 1x, ./images/img1-d@2x.jpg 2x"
+                src="./images/img1-d.jpg"
+                alt="desctop codding"
+              />
               <h3 class="works-type">Десктопні додатки</h3>
             </li>
 
             <li class="works-item">
-              <img class="works-img" src="./images/img2.jpg" alt="modile codding" width="370" />
+              <img
+                class="works-img"
+                srcset="./images/img2-d.jpg 1x, ./images/img2-d@2x.jpg 2x"
+                src="./images/img2-d.jpg"
+                alt="modile codding"
+              />
               <h3 class="works-type">Мобільні додатки</h3>
             </li>
 
             <li class="works-item">
-              <img class="works-img" src="./images/img3.jpg" alt="graffic design" width="370" />
+              <img
+                class="works-img"
+                srcset="./images/img3-d.jpg 1x, ./images/img3-d@2x.jpg 2x"
+                src="./images/img3-d.jpg"
+                alt="graffic design"
+              />
               <h3 class="works-type">Дизайнерські рішення</h3>
             </li>
           </ul>
@@ -180,156 +233,302 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__set list">
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/img4.jpg"
-                alt="Ігор Дем'яненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/img4-d.jpg 1x, ./images/img4-d@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/img4-t.jpg 1x, ./images/img4-t@2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/img4-m.jpg 1x, ./images/img4-m@2x.jpg 2x"
+                />
+                <img class="team__img" src="./images/img4-d.jpg" alt="Ігор Дем'яненко" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__position">Product Designer</p>
                 <ul class="soc-set list">
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
                   </li>
 
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
                   </li>
 
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
                   </li>
 
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
 
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/img5.jpg"
-                alt="Ольга Рєпіна"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/img5-d.jpg 1x, ./images/img5-d@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/img5-t.jpg 1x, ./images/img5-t@2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/img5-m.jpg 1x, ./images/img5-m@2x.jpg 2x"
+                />
+
+                <img class="team__img" src="./images/img5-d.jpg" alt="Ольга Рєпіна" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p class="team__position">Frontend Developer</p>
                 <ul class="soc-set list">
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
                   </li>
 
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
                   </li>
 
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
                   </li>
 
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
 
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/img6.jpg"
-                alt="Микола Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/img6-d.jpg 1x, ./images/img6-d@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/img6-t.jpg 1x, ./images/img6-t@2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/img6-m.jpg 1x, ./images/img6-m@2x.jpg 2x"
+                />
+
+                <img class="team__img" src="./images/img6-d.jpg" alt="Микола Тарасов" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__position">Marketing</p>
                 <ul class="soc-set list">
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
                   </li>
 
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
                   </li>
 
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
                   </li>
 
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
 
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/img7.jpg"
-                alt="Михайло Єрмаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/img7-d.jpg 1x, ./images/img7-d@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/img7-t.jpg 1x, ./images/img7-t@2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/img7-m.jpg 1x, ./images/img7-m@2x.jpg 2x"
+                />
+                <img class="team__img" src="./images/img7-d.jpg" alt="Михайло Єрмаков" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__position">UI Designer</p>
                 <ul class="soc-set list">
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
                   </li>
 
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
                   </li>
 
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
                   </li>
 
                   <li class="soc-set__item">
-                    <svg class="soc-set__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg>
+                    <a
+                      class="soc-set__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="soc-set__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -427,28 +626,56 @@
         <div class="footer__wrap-soc">
           <p class="fotter__title">приєднуйтесь</p>
           <ul class="soc-set list">
-            <li class="soc-set__item soc-set__item--dark">
-              <svg class="soc-set__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
+            <li class="soc-set__item">
+              <a
+                class="soc-set__link soc-set__link--dark"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <svg class="soc-set__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="soc-set__item soc-set__item--dark">
-              <svg class="soc-set__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg>
+            <li class="soc-set__item">
+              <a
+                class="soc-set__link soc-set__link--dark"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <svg class="soc-set__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="soc-set__item soc-set__item--dark">
-              <svg class="soc-set__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg>
+            <li class="soc-set__item">
+              <a
+                class="soc-set__link soc-set__link--dark"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <svg class="soc-set__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="soc-set__item soc-set__item--dark">
-              <svg class="soc-set__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-linkedin"></use>
-              </svg>
+            <li class="soc-set__item">
+              <a
+                class="soc-set__link soc-set__link--dark"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <svg class="soc-set__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -543,3 +770,8 @@
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
+
+<picture>
+  <source media="(min-width: )" srcset="" />
+  <img src="" alt="" />
+</picture>

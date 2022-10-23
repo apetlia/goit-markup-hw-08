@@ -29,30 +29,60 @@
           <span class="logo__span">Web</span>Studio</a
         >
 
-        <button
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          class="menu-button js-open-menu"
-        >
-          <svg width="40" height="40" aria-label="Menu switch">
+        <button type="button" class="menu-button-open">
+          <svg width="40" height="40">
             <use class="menu-button_icon-open" href="./images/icons.svg#icon-menu"></use>
-            <use class="menu-button_icon-close" href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <!-- 
-        <div class="menu-container js-menu-container" id="mobile-menu">
-          <button class="menu-button js-close-menu">
-            <svg width="40" height="40" aria-label="Menu switch"></svg>
-          </button>
+        <div class="mobile-menu is-hidden">
+          <div class="container">
+            <button type="button" class="mobile-menu__button-close">
+              <svg width="40" height="40">
+                <use class="mobile-menu_icon-close" href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <ul class="mobile-nav list">
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link link" href="./index.html">Студія</a>
+              </li>
 
-          <ul class="mobile-menu">
-            <li><a href="" class="link">About</a></li>
-            <li><a href="" class="link">Products</a></li>
-            <li><a href="" class="link">Contacts</a></li>
-            <li><a href="" class="link">Career</a></li>
-          </ul>
-        </div> -->
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link active-page link" href="./portfolio.html">Портфоліо</a>
+              </li>
+
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link link" href="">Контакти</a>
+              </li>
+            </ul>
+
+            <ul class="mobile-contact list">
+              <li class="mobile-contact__item">
+                <a class="mobile-contact__tel link" href="tel:+380961111111"> +38 096 111 11 11</a>
+              </li>
+
+              <li class="mobile-contact__item">
+                <a class="mobile-contact__mail link" href="mailto:info@devstudio.com">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobile-soc list">
+              <li class="mobile-soc__item">
+                <a href="#" class="mobile-soc__link link">Instagram</a>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="#" class="mobile-soc__link link">Twitter</a>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="#" class="mobile-soc__link link">Facebook</a>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="#" class="mobile-soc__link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <nav class="nav">
           <ul class="nav__list list">
@@ -121,13 +151,21 @@
             <li class="project-item">
               <a class="project-link link" href="">
                 <div class="project-wrap">
-                  <img
-                    class="project-img"
-                    src="./images/img8.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="./images/img8-d.jpg 1x, ./images/img8-d@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="./images/img8-t.jpg 1x, ./images/img8-t@2x.jpg 2x"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="./images/img8-m.jpg 1x, ./images/img8-m@2x.jpg 2x"
+                    />
+                    <img class="project-img" src="./images/img8-d.jpg" alt="Технокряк" />
+                  </picture>
                   <p class="project-wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -144,13 +182,26 @@
             <li class="project-item">
               <a class="project-link link" href="">
                 <div class="project-wrap">
-                  <img
-                    class="project-img"
-                    src="./images/img9.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="./images/img9-d.jpg 1x, ./images/img9-d@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="./images/img9-t.jpg 1x, ./images/img9-t@2x.jpg 2x"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="./images/img9-m.jpg 1x, ./images/img9-m@2x.jpg 2x"
+                    />
+                    <img
+                      class="project-img"
+                      src="./images/img9-d.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                    />
+                  </picture>
+
                   <p class="project-wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -167,13 +218,21 @@
             <li class="project-item">
               <a class="project-link link" href="">
                 <div class="project-wrap">
-                  <img
-                    class="project-img"
-                    src="./images/img10.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="./images/img10-d.jpg 1x, ./images/img10-d@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="./images/img10-t.jpg 1x, ./images/img10-t@2x.jpg 2x"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="./images/img10-m.jpg 1x, ./images/img10-m@2x.jpg 2x"
+                    />
+                    <img class="project-img" src="./images/img10-d.jpg" alt="Ресторан Seafood" />
+                  </picture>
                   <p class="project-wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -190,13 +249,21 @@
             <li class="project-item">
               <a class="project-link link" href="">
                 <div class="project-wrap">
-                  <img
-                    class="project-img"
-                    src="./images/img11.jpg"
-                    alt="Проєкт Prime"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="./images/img11-d.jpg 1x, ./images/img11-d@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="./images/img11-t.jpg 1x, ./images/img11-t@2x.jpg 2x"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="./images/img11-m.jpg 1x, ./images/img11-m@2x.jpg 2x"
+                    />
+                    <img class="project-img" src="./images/img11-d.jpg" alt="Проєкт Prime" />
+                  </picture>
                   <p class="project-wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -213,13 +280,21 @@
             <li class="project-item">
               <a class="project-link link" href="">
                 <div class="project-wrap">
-                  <img
-                    class="project-img"
-                    src="./images/img12.jpg"
-                    alt="Проєкт Boxes"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="./images/img12-d.jpg 1x, ./images/img12-d@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="./images/img12-t.jpg 1x, ./images/img12-t@2x.jpg 2x"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="./images/img12-m.jpg 1x, ./images/img12-m@2x.jpg 2x"
+                    />
+                    <img class="project-img" src="./images/img12-d.jpg" alt="Проєкт Boxes" />
+                  </picture>
                   <p class="project-wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -236,13 +311,25 @@
             <li class="project-item">
               <a class="project-link link" href="">
                 <div class="project-wrap">
-                  <img
-                    class="project-img"
-                    src="./images/img13.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="./images/img13-d.jpg 1x, ./images/img13-d@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="./images/img13-t.jpg 1x, ./images/img13-t@2x.jpg 2x"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="./images/img13-m.jpg 1x, ./images/img13-m@2x.jpg 2x"
+                    />
+                    <img
+                      class="project-img"
+                      src="./images/img13-d.jpg"
+                      alt="Inspiration has no Borders"
+                    />
+                  </picture>
                   <p class="project-wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -259,13 +346,25 @@
             <li class="project-item">
               <a class="project-link link" href="">
                 <div class="project-wrap">
-                  <img
-                    class="project-img"
-                    src="./images/img14.jpg"
-                    alt="Видання Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="./images/img14-d.jpg 1x, ./images/img14-d@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="./images/img14-t.jpg 1x, ./images/img14-t@2x.jpg 2x"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="./images/img14-m.jpg 1x, ./images/img14-m@2x.jpg 2x"
+                    />
+                    <img
+                      class="project-img"
+                      src="./images/img14-d.jpg"
+                      alt="Видання Limited Edition"
+                    />
+                  </picture>
                   <p class="project-wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -282,13 +381,21 @@
             <li class="project-item">
               <a class="project-link link" href="">
                 <div class="project-wrap">
-                  <img
-                    class="project-img"
-                    src="./images/img15.jpg"
-                    alt="Проєкт LAB"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="./images/img15-d.jpg 1x, ./images/img15-d@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="./images/img15-t.jpg 1x, ./images/img15-t@2x.jpg 2x"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="./images/img15-m.jpg 1x, ./images/img15-m@2x.jpg 2x"
+                    />
+                    <img class="project-img" src="./images/img15-d.jpg" alt="Проєкт LAB" />
+                  </picture>
                   <p class="project-wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -305,13 +412,21 @@
             <li class="project-item">
               <a class="project-link link" href="">
                 <div class="project-wrap">
-                  <img
-                    class="project-img"
-                    src="./images/img16.jpg"
-                    alt="Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="./images/img16-d.jpg 1x, ./images/img16-d@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="./images/img16-t.jpg 1x, ./images/img16-t@2x.jpg 2x"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="./images/img16-m.jpg 1x, ./images/img16-m@2x.jpg 2x"
+                    />
+                    <img class="project-img" src="./images/img16-d.jpg" alt="Growing Business" />
+                  </picture>
                   <p class="project-wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -332,8 +447,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__wrap-address">
-          <a class="logo footer__logo logo--white link" href="./index.html"
-            ><span class="logo__span">Web</span>Studio</a
+          <a class="logo footer__logo logo--white link" href="./index.html">
+            <span class="logo__span">Web</span>Studio</a
           >
           <address class="addresses">
             <ul class="list">
@@ -362,28 +477,56 @@
         <div class="footer__wrap-soc">
           <p class="fotter__title">приєднуйтесь</p>
           <ul class="soc-set list">
-            <li class="soc-set__item soc-set__item--dark">
-              <svg class="soc-set__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
+            <li class="soc-set__item">
+              <a
+                class="soc-set__link soc-set__link--dark"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <svg class="soc-set__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="soc-set__item soc-set__item--dark">
-              <svg class="soc-set__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg>
+            <li class="soc-set__item">
+              <a
+                class="soc-set__link soc-set__link--dark"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <svg class="soc-set__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="soc-set__item soc-set__item--dark">
-              <svg class="soc-set__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg>
+            <li class="soc-set__item">
+              <a
+                class="soc-set__link soc-set__link--dark"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <svg class="soc-set__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="soc-set__item soc-set__item--dark">
-              <svg class="soc-set__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-linkedin"></use>
-              </svg>
+            <li class="soc-set__item">
+              <a
+                class="soc-set__link soc-set__link--dark"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <svg class="soc-set__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -400,5 +543,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

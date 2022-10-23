@@ -4,7 +4,16 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity $animation-time, visibility $animation-time, transform $animation-time;
+
+  overflow: scroll;
+
+  @include tablet {
+    align-items: center;
+  }
 }
